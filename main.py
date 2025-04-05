@@ -6,7 +6,6 @@ from Table_generate import TruthTableGenerator
 def main():
     expression = input("Введите логическое выражение: ")
 
-    # Проверка выражения
     try:
         ExpressionValidator.validate(expression)
     except ValueError as e:
@@ -26,7 +25,6 @@ def main():
         print(f"Ошибка: {e}")
 
 
-    # Преобразование в ОПН
     rpn_converter = RPNConverter(expression)
     rpn_expression = rpn_converter.convert_to_rpn()
     #print(f"Обратная польская нотация: {' '.join(rpn_expression)}")
@@ -44,7 +42,6 @@ def main():
     print("Индексы СДНФ:", normal_forms["СДНФ Индексы"],"|")
     print("Индексы СКНФ:", normal_forms["СКНФ Индексы"],"&")
 
-    # Индексная форма
     index_form = truth_table_generator.compute_index_form()
     print("\nБинарная форма:", index_form["binary"])
     print("Десятичная форма:", index_form["decimal"])
