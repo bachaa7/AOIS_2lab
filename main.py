@@ -42,6 +42,7 @@ def main():
     print("Индексы СДНФ:", normal_forms["СДНФ Индексы"],"|")
     print("Индексы СКНФ:", normal_forms["СКНФ Индексы"],"&")
 
+
     index_form = truth_table_generator.compute_index_form()
     print("\nБинарная форма:", index_form["binary"])
     print("Десятичная форма:", index_form["decimal"])
