@@ -13,7 +13,6 @@ class TruthTableGenerator:
         self.subexpression_strings = []
 
     def generate_truth_table(self):
-        """Генерирует таблицу истинности"""
         self.parse_subexpressions()
         rpn_expr = self.rpn_converter.convert_to_rpn()
         table = []
@@ -34,7 +33,6 @@ class TruthTableGenerator:
         return table
 
     def compute_index_form(self):
-        """Вычисляет индексную форму (двоичный и десятичный эквивалент)"""
         truth_table = self.generate_truth_table()
         binary_repr = "".join(str(int(final_result)) for _, _, final_result in truth_table)
         decimal_value = int(binary_repr, 2)
@@ -81,7 +79,6 @@ class TruthTableGenerator:
             self.subexpression_strings.append(self.rpn_to_str(expr))
 
     def display_table(self):
-        """Выводит таблицу истинности в консоль"""
         table = self.generate_truth_table()
         col_width = 6
 

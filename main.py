@@ -29,7 +29,7 @@ def main():
     # Преобразование в ОПН
     rpn_converter = RPNConverter(expression)
     rpn_expression = rpn_converter.convert_to_rpn()
-    print(f"Обратная польская нотация: {' '.join(rpn_expression)}")
+    #print(f"Обратная польская нотация: {' '.join(rpn_expression)}")
 
     # Генерация таблицы истинности
     truth_table_generator = TruthTableGenerator(expression)
